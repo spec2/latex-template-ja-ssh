@@ -2,8 +2,9 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
 	"name": "LaTeX",
+	"service": "app",
+	"dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "ghcr.io/being24/latex-docker",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -12,9 +13,7 @@
 			]
 		}
 	},
-	"workspaceMount": "source=${localWorkspaceFolder},target=/workdir,type=bind",
-	"workspaceFolder": "/workdir",
-	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+	"workspaceFolder": "/workdir"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
