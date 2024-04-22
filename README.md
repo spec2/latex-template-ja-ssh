@@ -1,5 +1,13 @@
 # 日本語論文をLaTeXで書いて、textlintをするためのテンプレート
 
+## リポジトリの説明
+このリポジトリは、[latex-template-ja](https://github.com/being24/latex-template-ja)のリポジトリをフォークし、コンテナ内でSSHできるようにしたものです。
+### SSHの初期設定
+- `~/.ssh`に鍵を生成し、配置してください
+>       - type: bind
+>         source: ~/.ssh
+>         target: /root/.ssh
+> `docker-compose.yml`
 ## 機能
 
 * 個人環境にLaTeX workshopを構築せず、dockerでビルドします
